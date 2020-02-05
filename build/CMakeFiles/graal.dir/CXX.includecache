@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bergony/lp_lista_2/include/graal.h
+
+/home/bergony/lp_lista_2/src/graal.cpp
+iostream
+-
+../include/graal.h
+/home/bergony/lp_lista_2/include/graal.h
+

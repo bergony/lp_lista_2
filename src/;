@@ -1,0 +1,123 @@
+#include <iostream>
+#include <cstdlib>
+#include <iterator>
+
+typedef unsigned char byte; //Valor de 1 byte
+
+//Retorn menor volar de vetor  conforme paramentro bool;
+const void *min ( const void *, const void *, size_t, bool (*cmp)(const void *, const void *));
+// Reverte  o vetor
+void reverse ( void * first , void * last , size_t size );
+//Copy um vetor para oturo;
+void * copy ( const void * first , const  void * last , const void * d_first , size_t size );
+//
+void * clone ( const void * first , const void * last , size_t size );
+//
+const void * find_if ( const void * first , const void * last , size_t size , bool (*p)(const void *) );
+//
+const void * find ( const void * first , const void * last , size_t size , const void * value , bool (*eq)( const void *, const void * ) );
+//
+bool all_of ( const void * first , const void * last , size_t size , bool (*p)(const void *) );
+bool any_of ( const void * first , const void * last , size_t size , bool (*p)(const void *) );
+bool none_of ( const void * first , const void * last , size_t size , bool (*p)(const void *) );
+//
+void * unique ( void * first , void * last , size_t size , bool (*eq)( const void *, const void * )  );
+//
+void * partition ( void * first , void * last , size_t size ,  bool (*p)(const void *) );
+//
+bool cmp ( const void * , const void * );
+bool p ( const void * );
+bool eq ( const void * , const void * );
+
+
+
+/* Funcoes */
+//CMP Se Paran 1 > Paran 2 Verdade se nao false
+bool  cmp(const void *min, const void *max)
+{
+    const int * maxCast = (const int *) max;
+    const int * minCast = (const int *) min;
+
+    if(*minCast > *maxCast)
+    {
+        return true;
+    }
+    return false;
+}
+//Retornar o menor valor de  1 vetor
+const void *min( const void *first, const void *last, size_t size, bool (*cmp)(const void *, const void *))
+{
+
+    byte *first_cast = (byte *) first;
+    byte *last_cast = (byte *) last;
+    byte *min = (byte *) first_cast;
+
+    while(first_cast != last_cast)
+    {
+        if(cmp(min, first_cast))
+        {
+            *min = *first_cast;
+        }
+        first_cast += size;
+    }
+
+    return min;
+}
+//Reveter o valor do vetor
+void reverse ( void * first , void  * last, size_t size)
+{
+    byte *first_cast =  (byte *) first;
+    byte *last_cast = (byte *) last;
+    byte aux = *first_cast;
+    while(first_cast != last_cast){
+        last_cast -= size;
+        aux = *first_cast;
+        *first_cast = *last_cast;
+        *last_cast = aux;
+        first_cast += size;
+    }
+}
+//Imprimer o vetor
+void printffor(const int * first, const int * last)
+{
+    std::cout << "Vetor = [ ";
+    while(first != last)
+    {
+        std::cout << *first << " ";
+        first++;
+    }
+    std::cout << "]"<< std::endl;
+}
+// Copia o vetor
+void * copy ( const void * first , const  void * last , const void * d_first , size_t size )
+{
+    byte *first_cast =  (byte *) first;
+    byte *last_cast = (byte *) last;
+    byte *d_first_cast = (byte *) d_first;
+
+    d_first_cast =  first_cast
+
+
+
+    return d_first_cast;
+}
+
+
+int main( void )
+{
+    int A[] = {25, 2, 3, 4, 10, 30};
+/*
+    int * b = (int * ) min(std::begin(A), std::end(A), sizeof(int), cmp);
+    std::cout << *b << "\n";
+
+    printffor(std::begin(A), std::end(A));
+    reverse(std::begin(A), std::end(A), sizeof(int));
+    printffor(std::begin(A), std::end(A));
+*/
+    int *cloneBegin;
+    int *cloneEnd = (int *) copy(std::begin(A), std::end(A), cloneBegin, sizeof(int));
+
+    std::cout << cloneBegin << std::endl;
+
+    return 0;
+}

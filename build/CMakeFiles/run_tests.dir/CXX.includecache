@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bergony/lp_lista_2/include/graal.h
+
+/home/bergony/lp_lista_2/test/main.cpp
+iterator
+-
+functional
+-
+algorithm
+-
+gtest/gtest.h
+/home/bergony/lp_lista_2/test/gtest/gtest.h
+../include/graal.h
+/home/bergony/lp_lista_2/include/graal.h
+

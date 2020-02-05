@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall   CMakeFiles/main.dir/src/main.cpp.o  -o main  -L/home/bergony/lp_lista_2/lib -Wl,-rpath,/home/bergony/lp_lista_2/lib libgraal.a 

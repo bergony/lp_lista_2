@@ -1,0 +1,9 @@
+/home/bergony/lp_lista_2/build/CMakeFiles/install/strip.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/install/local.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/main.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/run_tests.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/edit_cache.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/install.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/graal.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/rebuild_cache.dir
+/home/bergony/lp_lista_2/build/CMakeFiles/list_install_components.dir
